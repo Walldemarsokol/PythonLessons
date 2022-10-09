@@ -6,7 +6,18 @@
 #Задача 7.
 # Напишите программу для. проверки истинности 
 # утверждения ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z для всех значений предикат.
+# not(x or y or z) = not x and not y and not z
 
+# x = int(input(''))
+# y = int(input(''))
+# z = int(input(''))
+# left_part = not (x or y or z)
+# rigth_part = not x and not y and not z
+
+# if left_part == rigth_part:
+#     print()
+# else:
+#     print()
 
 #Задача 8.
 # Напишите программу, которая принимает на вход координаты точки (X и Y), 
