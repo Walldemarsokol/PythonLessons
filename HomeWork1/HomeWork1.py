@@ -39,5 +39,5 @@ x1= int(input('Введите координаты x1: '))
 y1= int(input('Введите координаты y1: '))
 x2= int(input('Введите координаты x2: '))
 y2= int(input('Введите координаты y2: '))
-result = float(math.sqrt((x2-x1)**2+(y2-y1)**2))
-print(f'{result:.2f}')
+
+print(f'{float(math.sqrt((x2-x1)**2+(y2-y1)**2)):.2f}')
