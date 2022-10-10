@@ -4,20 +4,20 @@
 # print('No' if n>0 and n<6 else 'Yes')
 
 #Задача 7.
-# Напишите программу для. проверки истинности 
-# утверждения ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z для всех значений предикат.
-# not(x or y or z) = not x and not y and not z
+# Напишите программу для проверки истинности 
+# утверждения ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z для всех значений предикат. not(x or y or z) = not x and not y and not z
 
-# x = int(input(''))
-# y = int(input(''))
-# z = int(input(''))
-# left_part = not (x or y or z)
-# rigth_part = not x and not y and not z
-
-# if left_part == rigth_part:
-#     print()
-# else:
-#     print()
+# def input_numbers():
+#     for x in range(0,2):
+#         for y in range(0,2):
+#             for z in range(0,2):
+#                 left_part = not (x or y or z)
+#                 rigth_part = not x and not y and not z
+#                 if left_part == rigth_part:
+#                     print("Утверждение истинно")
+#                 else:
+#                     print('Утверждение ложно')
+# print(input_numbers())
 
 #Задача 8.
 # Напишите программу, которая принимает на вход координаты точки (X и Y), 
@@ -55,6 +55,7 @@
 #Задача 10.
 # Напишите программу, которая принимает на вход координаты 
 # двух точек и находит расстояние между ними в 2D пространстве.
+
 # import math
 
 # x1= int(input('Введите координаты x1: '))
