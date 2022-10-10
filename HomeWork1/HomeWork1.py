@@ -26,7 +26,7 @@
 
 # x =int(input('Введите значение Х : '))
 # y =int(input('Введите значение У : '))
-# if x==0 and y==0:
+# if x==0 or y==0:
 #     print('Введите другое значение Х и У')
 # else:
 #     if x>0 and y>0: #or (x<0 and y>0) or (x<0 and y<0) or (x>0 and y<0):
