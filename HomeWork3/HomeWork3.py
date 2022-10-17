@@ -14,15 +14,18 @@
 # списка. Парой считаем первый и последний элемент, второй и предпоследний и т.д.
 
 # list=[]
-# for _ in range(3):
-#     list.append(input('введите числа через enter: '))
+# list_of_product =[]
+# n=int(input("Введите размер строк: "))
+# for _ in range(n):
+#     list.append(int(input('введите числа через enter: ')))
+#     for i in range(len(list)):
 
-# if 
-# # list_of_product =[]
-# # for i in range(0,len(list)//2):
-# #     for j in range(len(list)//2,-len(list)):
+
+
+# for i in range(0,len(list)//2):
+#     for j in range(len(list)//2,-len(list)):
         
-#         print(list)
+# print(list)
 
 
 # Задача 3 Задайте список из вещественных чисел. Напишите программу, 
