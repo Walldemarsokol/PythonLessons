@@ -267,6 +267,119 @@
 # # body line n
 #  # optional return
 
+# for i in rage(1,10,2) # если стоит 3 аргумента, то первый - начало отчета, второй это крайний элемент #-1 и последний аргумент это число,что плюсуется и получается отчет 1+2(3)+2(5)+2(7)+2(9). Тобишь в #данном случае выводится нечетное
+# 	print(i)
+
+# r = range(5) # range(0, 5)
+# r = range(2, 5) # range(2, 5)
+# r = range(-5, 0) # range(-5, 0)
+# r = range(1, 10, 2) # range(1, 10, 2)
+# r = range(100, 0, -20) # range(100, 0, -20)
+# r = range(100, 0, -20) # range(100, 0, -20)
+# for i in r:
+#  print(i)
+# # 100 80 60 40 20
+# for i in range(5):
+#  print(i)
+# # 0 1 2 3 4
+# line = ""
+# for i in range(5):
+#  line = ""
+#  for j in range(5):
+#  line += "*"
+#  print(line)
+# #о строках в пайтон
+
+# text = 'съешь ещё этих мягких французских булок'
+# print(len(text)) # 39
+# print('ещё' in text) # True
+# print(text.isdigit()) # False
+# print(text.islower()) # True
+# print(text.replace('ещё','ЕЩЁ')) #
+# for c in text:
+#  print(c)
+# print(text[0])  #c
+# print(text[1])  #ъ
+# print(text[len(text)])  #IndexError
+# print(text[len(text)-1])  #k
+# print(text[-5])   #б   если с=0 индекс,то к(в конце строки) будет иметь индекс -1.
+# #следовательно если идти в лево,то минусовой индекс -5 будет иметь значение "б"
+# print(text[:2])    #съ .значение в скобках это диапазон. по умолчанию пишется от нуля и можно не #указывать нуль, если нужен диапазон от нуля. Если нужен другой диапазон, то нужно указать индекс
+# # если написать print(text[:]) то выдаст значение от 0 и до length ,тобишь все
+
+# print(text[6:-18]) # значит, что значение диапазона будет с начала строки на 6 индексе и с конца #строки на -18 индексе. "еще этих мягких"
+
+# #если не знаю какое значение имеет определенный синтаксис, то можно поступить так: 
+# ввести help(запрашиваемый синтаксис) и запустить программу. нам дадут справку о строке
+
+# text = 'съешь ещё этих мягких французских булок'
+# print(text[0]) # c
+# print(text[1]) # ъ
+# print(text[len(text)-1]) # к
+# print(text[-5]) # б
+# print(text[:]) # print(text)
+# print(text[:2]) # съ
+# print(text[len(text)-2:]) # ок
+# print(text[2:9]) # ешь ещё
+# print(text[6:-18]) # ещё этих мягких
+# print(text[0:len(text):6]) # сеикакл
+# print(text[::6]) # сеикакл
+# text = text[2:9] + text[-5] + text[:2] #
+
+# Список – пронумерованная, изменяемая коллекция
+# объектов произвольных типов
+# Списки: введение
+# numbers = [1, 2, 3, 4, 5]
+# print(numbers)        # [1, 2, 3, 4, 5]
+# numbers = list(range(1, 6))
+# print(numbers)        # [1, 2, 3, 4, 5]
+# numbers[0] = 10
+# print(f'{len(numbers)}len')
+# print(numbers)        # [10, 2, 3, 4, 5]
+# for i in numbers:
+#  i *= 2
+#  print(i)             # [20, 4, 6, 8, 10]
+# print(numbers)        # [10, 2, 3, 4, 5]
+
+# #если хотим преобразовать тип данных range в тип данных list потребуется сделать вот что:
+
+# ran=range(1,6)
+# numbers=list(ran)
+
+
+# colors = ['red', 'green', 'blue']
+# for e in colors:
+#  print(e) # red green blue
+# for e in colors:
+#  print(e*2) # redred greengreen blueblue
+# colors.append('gray') # добавить в конец
+# print(colors == ['red', 'green', 'blue', 'gray']) # True
+# colors.remove('red') #del colors[0] # удалить элемент	
+
+# #Это фрагмент программы, используемый
+# #многократно
+# def function_name(x):
+# # body line 1
+# # . . .
+# # body line n
+#  # optional return	
+
+
+# def f(x):
+#  return x**2
+# def f(x):
+#  if x == 1:
+#  return 'Целое'
+#  elif x == 2.3:
+#  return 23
+#  else:
+#  return
+# print(f(1)) # Целое
+# print(f(2.3)) # 23
+# print(f(28)) # None
+# print(type(f(1))) # str
+# print(type(f(2.3))) # int
+# print(type(f(28))) # NoneType
 
 def f(x):
  return x**2
