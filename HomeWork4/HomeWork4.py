@@ -16,7 +16,7 @@
 
 # n=int(input('Enter number: '))
 # some_list=[]
-# for i in range(2,n//2+1):
+# for i in range(2,n+1):
 #     if n%i==0:
 #         for j in range(2,i//2+1):
 #             if i%j==0:
@@ -24,7 +24,6 @@
 #         else:
 #             some_list.append(i)
 # print(some_list)
-
 
 # Задача 3. Задайте последовательность чисел. Напишите программу, 
 # которая выведет список неповторяющихся элементов исходной последовательности.
