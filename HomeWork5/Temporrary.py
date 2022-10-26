@@ -1,5 +1,6 @@
 #Создайте программу для игры с конфетами человек против человека.
-import time 
+import random
+import time
 def check_number(x,y,z):
     x=str(x)
     if x.isnumeric()==True:
@@ -82,7 +83,7 @@ if mode==2:
             print('____________\n')
             if total_sweets == 0:
                 player_1st_have=player_2nd_have+player_1st_have
-                print(f'Player2 have all {player_2nd_have} candy`s. ')
+                print(f'Player1 have all {player_1st_have} candy`s. ')
                 print('Congratilations! 1st Player win!')
                 time.sleep(5)
                 break
@@ -97,22 +98,20 @@ if mode==2:
         
         print(f'Left {total_sweets} in basket')
         if total_sweets<=28:
-            turn_2_player =input('1st player turn. Enter number limit in 1-28: ')
-            turn_2_player =check_number(turn_2_player,1,total_sweets)
+            turn_2_player = random.randint(1,total_sweets)
             total_sweets = total_sweets-turn_2_player
             player_2nd_have+=turn_2_player
             print('____________\n')
             if total_sweets == 0:
                 player_2nd_have=player_2nd_have+player_1st_have
-                print(f'Player2 have all {player_2nd_have} candy`s. ')
-                print('Congratilations! 2st Player win!')
+                print(f'EasyBot have all {player_2nd_have} candy`s. ')
+                print('Congratilations! EasyBot win!')
                 time.sleep(5)
                 break
                 
-        turn_2_player =input('2st player turn. Enter number limit in 1-28: ')
-        turn_2_player =check_number(turn_2_player,1,28)
+        turn_2_player = random.randint(1,28)
         total_sweets = total_sweets-turn_2_player
         player_2nd_have+=turn_2_player
-        print(f'2nd Player have a {player_2nd_have} candy`s')
+        print(f'EasyBot have a {player_2nd_have} candy`s')
         print(f'Left {total_sweets} in basket')
         print('____________\n')
