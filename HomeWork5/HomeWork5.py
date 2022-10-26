@@ -20,7 +20,7 @@
 
 
 
-#Создайте программу для игры с конфетами человек против человека.
+# # Создайте программу для игры с конфетами человек против человека.
 # import random
 # import time
 
@@ -32,8 +32,8 @@
 #         if x == y:
 #             return x
 #         if x == z:
-#             return z
-#         if x > y and x <= z:
+#             return x
+#         if x >= y and x <= z:
 #             return x
 #         else:
 #             return check_number(input('Enter correct number: '), y, z)
@@ -66,14 +66,14 @@
 #                 print(f'Congratilations! {name_1} win!')
 #                 time.sleep(5)
 #                 break
-
-#         turn_1_player = input(f'Now is {name_1} turn. Enter number limit in 1-28: ')  # enter number
-#         turn_1_player = check_number(turn_1_player, 1, 28)
-#         total_sweets = total_sweets-turn_1_player  # turn 1st player
-#         player_1st_have += turn_1_player  # 1st player have sweets
-#         print(f'{name_1} have a {player_1st_have} candy`s')
-#         print(f'Left {total_sweets} sweets in basket')
-#         print('____________\n')
+#         else:
+#             turn_1_player = input(f'Now is {name_1} turn. Enter number limit in 1-28: ')  # enter number
+#             turn_1_player = check_number(turn_1_player, 1, 28)
+#             total_sweets = total_sweets-turn_1_player  # turn 1st player
+#             player_1st_have += turn_1_player  # 1st player have sweets
+#             print(f'{name_1} have a {player_1st_have} candy`s')
+#             print(f'Left {total_sweets} sweets in basket')
+#             print('____________\n')
 
 #         print(f'Left {total_sweets} sweets in basket')
 #         if total_sweets <= 28:
@@ -88,14 +88,14 @@
 #                 print(f'Congratilations! {name_2} win!')
 #                 time.sleep(5)
 #                 break
-
-#         turn_2_player = input(f'Now is {name_2} turn. Enter number limit in 1-28: ')
-#         turn_2_player = check_number(turn_2_player, 1, 28)
-#         total_sweets = total_sweets-turn_2_player
-#         player_2nd_have += turn_2_player
-#         print(f'{name_2} have a {player_2nd_have} candy`s')
-#         print(f'Left {total_sweets} sweets in basket')
-#         print('____________\n')
+#         else:
+#             turn_2_player = input(f'Now is {name_2} turn. Enter number limit in 1-28: ')
+#             turn_2_player = check_number(turn_2_player, 1, 28)
+#             total_sweets = total_sweets-turn_2_player
+#             player_2nd_have += turn_2_player
+#             print(f'{name_2} have a {player_2nd_have} candy`s')
+#             print(f'Left {total_sweets} sweets in basket')
+#             print('____________\n')
 
 
 # if mode == 2:
@@ -115,14 +115,14 @@
 #                 print('Congratilations! 1st Player win!')
 #                 time.sleep(5)
 #                 break
-
-#         turn_1_player = input(f'Now is {name_1} turn. Enter number limit in 1-28: ')  # enter
-#         turn_1_player = check_number(turn_1_player, 1, 28)
-#         total_sweets = total_sweets-turn_1_player  # turn 1st player
-#         player_1st_have += turn_1_player  # 1st player have sweets
-#         print(f'{name_1} have a {player_1st_have} candy`s')
-#         print(f'Left {total_sweets} sweets in basket')
-#         print('____________\n')
+#         else:
+#             turn_1_player = input(f'Now is {name_1} turn. Enter number limit in 1-28: ')  # enter
+#             turn_1_player = check_number(turn_1_player, 1, 28)
+#             total_sweets = total_sweets-turn_1_player  # turn 1st player
+#             player_1st_have += turn_1_player  # 1st player have sweets
+#             print(f'{name_1} have a {player_1st_have} candy`s')
+#             print(f'Left {total_sweets} sweets in basket')
+#             print('____________\n')
 
 #         print(f'Left {total_sweets} sweets in basket')
 #         if total_sweets <= 28:
@@ -163,14 +163,14 @@
 #                 print('Congratilations! 1st Player win!')
 #                 time.sleep(5)
 #                 break
-                               
-#         turn_1_player =input(f'Now is {name_1} turn. Enter number limit in 1-28: ')# enter
-#         turn_1_player=check_number(turn_1_player,1,28)
-#         total_sweets = total_sweets-turn_1_player  # turn 1st player
-#         player_1st_have+=turn_1_player  # 1st player have sweets
-#         print(f'{name_1} have a {player_1st_have} candy`s')
-#         print(f'Left {total_sweets} sweets in basket')
-#         print('____________\n')
+#         else:                    
+#             turn_1_player =input(f'Now is {name_1} turn. Enter number limit in 1-28: ')# enter
+#             turn_1_player=check_number(turn_1_player,1,28)
+#             total_sweets = total_sweets-turn_1_player  # turn 1st player
+#             player_1st_have+=turn_1_player  # 1st player have sweets
+#             print(f'{name_1} have a {player_1st_have} candy`s')
+#             print(f'Left {total_sweets} sweets in basket')
+#             print('____________\n')
         
 #         print(f'Left {total_sweets} sweets in basket')
 #         if total_sweets<=28:
@@ -196,31 +196,48 @@
 
 #_____________________________
 #Задача 42.Создайте RLE алгоритм. реализуйте модуль сжатия и восстановления данных.
-# def encode(s):
-#     encoding = "" # сохраняет выходную строку
-#     i = 0
-#     while i < len(s):
-#         # подсчитывает количество вхождений символа в индексе `i`
-#         count = 1
-#         while i + 1 < len(s) and s[i] == s[i + 1]:
-#             count = count + 1
-#             i = i + 1
-#         # добавляет к результату текущий символ и его количество
-#         encoding += str(count) + s[i]
-#         i = i + 1
-#     return encoding
- 
-# if __name__ == '__main__':
- 
-#     s = 'aaaadddrrrttt'
-#     print(encode(s))
+# Входные и выходные данные хранятся в отдельных текстовых файлах.
 
 
-list=[]
-with open('file3.txt', 'r', encoding='utf-8') as f:
-        f=f.read()
-        list.append(f)
-list=str(list)
-for i in range(len(list)):
-    list.split(list[i])
-print(list) 
+def encode(s):
+    encoding = "" # сохраняет выходную строку
+    i = 0
+    while i < len(s):
+        # подсчитывает количество вхождений символа в индексе `i`
+        count = 1
+        while i + 1 < len(s) and s[i] == s[i + 1]:
+            count = count + 1
+            i = i + 1
+        # добавляет к результату текущий символ и его количество
+        encoding += str(count) + s[i]
+        i = i + 1
+    return encoding
+
+def uncode(s):
+    uncoding =str # сохраняет выходную строку
+    i = 0
+    while i < len(s):
+        # подсчитывает количество вхождений символа в индексе `i`
+        for a in range(len(s)):
+            if a%2==0:
+                r=int(s[a])
+                while r>0:
+                    uncoding
+                    r-=1
+            else:
+                uncoding+=s[a]
+    return uncoding
+
+some_list=''
+with open('file.txt', 'r', encoding='utf-8') as f:# read text in file
+    f=f.read()
+    some_list=f
+some_list=encode(some_list)
+with open('file1.txt','w',encoding='utf-8') as f:# write new coding to file
+    f.write(some_list)
+with open('file1.txt', 'r', encoding='utf-8') as f:# read text in file1
+    f=f.read()
+    some_list=f
+print(uncode(some_list))
+# with open('file2.txt', 'r',encoding='utf-8') as f:
+#     f=f.write(some_list)
