@@ -107,10 +107,10 @@
 
 # 38. Напишите программу, удаляющую из текста все слова, содержащие "абв".
 
-# text = input()
-# text = text.split()
-# new_text = list(filter(lambda i: 'abc' not in i, text))
-# print(new_text)
+text = input()
+text = text.split()
+new_text = list(filter(lambda i: 'abc' not in i, text))
+print(new_text)
 
 
 
