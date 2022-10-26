@@ -21,9 +21,9 @@ def check_number(x, y, z):
 
 print('\n"Welcome to the candy-game! Lets start!"\n')
 print('____________________________________________ \n')
-mode = (int(input('Choose your game mode: PvP(enter 1) or PvEasyBot (enter 2) or PvSmartBot (enter 3)')))
+mode = int(input('Choose your game mode: PvP(enter 1) or PvEasyBot (enter 2) or PvSmartBot (enter 3)'))
 mode = check_number(mode, 1, 3)
-total_sweets = 2021
+total_sweets = int(input('Choose how many sweets will be in game:')) #Choose 2021 if is a homework
 player_2nd_have = 0
 player_1st_have = 0
 if mode == 1:
