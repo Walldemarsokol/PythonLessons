@@ -6,7 +6,7 @@ import time
 
 def check_number(x, y, z):
     x = str(x)
-    if x.isnumeric() == True:
+    if x.isnumeric() is True:
         x = int(x)
         if x == y:
             return x

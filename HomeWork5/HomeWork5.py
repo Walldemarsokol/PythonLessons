@@ -198,7 +198,6 @@
 #Задача 42.Создайте RLE алгоритм. реализуйте модуль сжатия и восстановления данных.
 # Входные и выходные данные хранятся в отдельных текстовых файлах.
 
-
 def encode(s):
     encoding = "" # сохраняет выходную строку
     i = 0
@@ -213,31 +212,34 @@ def encode(s):
         i = i + 1
     return encoding
 
-def uncode(s):
-    uncoding =str # сохраняет выходную строку
-    i = 0
-    while i < len(s):
-        # подсчитывает количество вхождений символа в индексе `i`
-        for a in range(len(s)):
-            if a%2==0:
-                r=int(s[a])
-                while r>0:
-                    uncoding
-                    r-=1
-            else:
-                uncoding+=s[a]
-    return uncoding
+def rle_decode(encoded_string):
+    encoded_string=str(encoded_string)
+    decoded_string =''
+    char_amount =''
+    for i in range(len(encoded_string)):
+        if encoded_string[i].isdigit() is True:
+            char_amount += encoded_string[i]
+        else:
+            decoded_string+=encoded_string[i] * int(char_amount)
+            char_amount = ''
+    return decoded_string
+
 
 some_list=''
-with open('file.txt', 'r', encoding='utf-8') as f:# read text in file
+with open('file2.txt', 'r', encoding='utf-8') as f:# read text in file
     f=f.read()
     some_list=f
 some_list=encode(some_list)
-with open('file1.txt','w',encoding='utf-8') as f:# write new coding to file
+with open('file_code.txt','w',encoding='utf-8') as f:# write new coding to file
     f.write(some_list)
-with open('file1.txt', 'r', encoding='utf-8') as f:# read text in file1
+with open('file_code.txt', 'r', encoding='utf-8') as f:# read text in file1
     f=f.read()
     some_list=f
-print(uncode(some_list))
-# with open('file2.txt', 'r',encoding='utf-8') as f:
-#     f=f.write(some_list)
+with open('file_uncode.txt', 'w',encoding='utf-8') as f:
+    f.write(rle_decode(some_list))
+
+# # import os
+# # # clear = lambda: os.system('clear')  # При использовании MacOS или Linux
+# clear = lambda: os.system('CLS')  # При использовании Windows
+# clear()
+
