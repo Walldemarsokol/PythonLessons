@@ -15,7 +15,6 @@ clear()
 # Примечание: если обособление чисел кавычками не будет получаться - можете вернуться к его реализации позже. Главное: дополнить числа до двух разрядов нулём!
 
 
-
 #Решение 1, простое:
 # some_list=['в', '5', 'часов', '17', 'минут', 'температура', 'воздуха', 'была', '+5', 'градусов']
 # some_list[1],some_list[3],some_list[8]='"05"', '"17"','"+05"'
@@ -82,48 +81,48 @@ clear()
 # в)Создать новый список, содержащий те же цены, но отсортированные по убыванию.
 # г)Вывести цены пяти самых дорогих товаров. Сможете ли вывести цены этих товаров по возрастанию, написав минимум кода?
 
-some_list = [34.51, 45.67, 234.05, 666, 78.03, 123, 234.34, 76, 654.67, 76.09, 45.65,23]
+# some_list = [34.51, 45.67, 234.05, 666, 78.03, 123, 234.34, 76, 654.67, 76.09, 45.65,23]
 
-def print_prices(list):
-    result=[]
-    for i in list:
+# def print_prices(list):
+#     result=[]
+#     for i in list:
        
-        if i%1 != 0:
-            change=str(round((i%1),2)).replace('0','',1).replace('.','')
-            result.append(str(int(i//1)) + ' руб ' + change + ' коп')
-        else:
-            result.append(str(i) + ' руб 00 коп')
+#         if i%1 != 0:
+#             change=str(round((i%1),2)).replace('0','',1).replace('.','')
+#             result.append(str(int(i//1)) + ' руб ' + change + ' коп')
+#         else:
+#             result.append(str(i) + ' руб 00 коп')
 
-    return result
+#     return result
 
-print('Выводим цены хх руб xx коп:')
+# print('Выводим цены хх руб xx коп:')
 
-print(print_prices(some_list))
+# print(print_prices(some_list))
 
-some_list.sort()
+# some_list.sort()
 
-print('Выводим цены по возрастанию:')
+# print('Выводим цены по возрастанию:')
 
-print(print_prices(some_list))
+# print(print_prices(some_list))
 
-new_list=some_list
+# new_list=some_list
 
-new_list.sort(reverse=True)
+# new_list.sort(reverse=True)
 
-print('Выводим новый список цен сортированный по убываниюЖ')
+# print('Выводим новый список цен сортированный по убываниюЖ')
 
-print(print_prices(new_list))
+# print(print_prices(new_list))
 
-print('выводим цены TOP 5 самых доpогих товаров!: ')
+# print('выводим цены TOP 5 самых доpогих товаров!: ')
 
-top_5=[]
-k=0
-for i in new_list:
-    top_5.append(i)
-    k+=1
-    if k==5:
-        break
+# top_5=[]
+# k=0
+# for i in new_list:
+#     top_5.append(i)
+#     k+=1
+#     if k==5:
+#         break
 
-top_5.sort()
+# top_5.sort()
 
-print(print_prices(top_5))
+# print(print_prices(top_5))
