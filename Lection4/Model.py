@@ -7,7 +7,5 @@ def init(a,b):  #в методе мы указываем глобал для т�
     x=a
     y=b
 
-init(11,22)
-
-print(x)
-print(y)
+def summ():
+    return x + y
