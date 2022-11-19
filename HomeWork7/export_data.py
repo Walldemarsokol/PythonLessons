@@ -1,7 +1,7 @@
 #модуль экспорта
 
 def export_data():
-    with open('phone.csv', 'r') as file:
+    with open('phone.csv', 'r', encoding='utf-16') as file:
         data = []
         t = []
         for line in file:

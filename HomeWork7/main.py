@@ -1,5 +1,8 @@
 from controller import *
 
-greeting()
 
+greeting()
+choice()
+greeting()
+choice()
 choice_todo()
