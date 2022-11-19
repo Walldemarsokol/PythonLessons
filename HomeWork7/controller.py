@@ -2,9 +2,24 @@ from import_data import import_data
 from export_data import export_data
 from print_data import print_data
 from search_data import search_data
+from user_login import *
+from registration import reg_user
 
 def greeting():
-    print("Добро пожаловать в телефонный справочник!")
+    print('Добро пожаловать в базу данных компании!\n\
+            Для регистрации нажмите 1;\n \
+            Для входа по имени + пароль нажмите 2;\n\
+            При ошибке ввода можно повторить попытку.\n')
+
+def choice():
+    data=input('Enter number: ')
+    if data=='1':
+        return reg_user()
+    elif data=='2':
+        return user_log_in()
+    else:
+        return choice(input('Введите 1 или 2: '))
+        
 
 def input_data():
     last_name = input("Введите фамилию: ")
@@ -28,7 +43,7 @@ def choice_todo():
     elif ch == '2':
         data = export_data()
         print_data(data)
-    else:
+    elif ch== '3':
         word = input("Введите данные для поиска: ")
         data = export_data()
         item = search_data(word, data)
@@ -38,3 +53,6 @@ def choice_todo():
             print(item[0].center(20),item[1].center(20),item[2].center(20),item[3].center(20),item[4].center(15),item[5].center(30))
         else:
             print("Данные не обнаруженны")
+    else:
+        print('Неверный ввод данных. Повторите попытку выбора.')
+        return choice_todo()
