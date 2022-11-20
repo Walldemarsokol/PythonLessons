@@ -1,4 +1,5 @@
 #модуль экспорта
+from log import exp_data
 
 def export_data():
     with open('phone.csv', 'r', encoding='utf-16') as file:

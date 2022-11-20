@@ -1,11 +1,11 @@
 from log import log_sing_up
 
+
 def reg_user():
     user=input('Введите имя пользователя: ')
     with open('users.txt','a+',encoding='utf-8') as f:
         f.write('-----\n')
     check_name('users.txt',user) #проверяет есть ли такой пользователь.
-    
     reg_password()
 
 

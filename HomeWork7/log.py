@@ -1,21 +1,36 @@
 from datetime import datetime
 
 def log_in(data):# функция для фиксации входа в систему
-    time = datetime.now().strftime('%H:%M')
+    time = datetime.now().strftime('%c')
     with open('log.csv', 'a+', encoding='utf-8') as file:
         file.write(f'пользователь {data} вошел в систему в {time}\n')
         
-def log_sing_up(data):# фиксация регистрации пользователя
-    time = datetime.now().strftime('%H:%M')
+def log_in_not_auto():# функция для фиксации входа в систему
+    time = datetime.now().strftime('%c')
     with open('log.csv', 'a+', encoding='utf-8') as file:
-        file.write(f'пользователь {data} зарегистрирован в системе в {time}\n')
+        file.write(f'Неавторизированный пользователь вошел в систему в {time}\n')
+        
+def log_sing_up(data):# фиксация регистрации пользователя
+    time = datetime.now().strftime('%c')
+    with open('log.csv', 'a+', encoding='utf-8') as file:
+        file.write(f'{time} пользователь {data} был успешно зарегистрирован в системе. \n')
         
 def log_out(data):# функция для фиксации выхода из системы
-    time = datetime.now().strftime('%H:%M')
+    time = datetime.now().strftime('%c')
     with open('log.csv', 'a+', encoding='utf-8') as file:
-        file.write(f'пользователь {data} вышел из системы в {time}\n')
+        file.write(f'{time} пользователь {data} вышел из системы.\n')
 
 def uncorrect_password(data):# функция для фиксации попытки входа в систему
-    time = datetime.now().strftime('%H:%M')
+    time = datetime.now().strftime('%c')
     with open('log.csv', 'a+', encoding='utf-8') as file:
-        file.write(f'Была попытка входа в систему.Неправильно ввели пароль. {data} пытался войти в систему в {time}\n')
+        file.write(f'{time} была попытка входа в систему. Неправильно ввели пароль. {data} пытался войти в систему. \n')
+        
+def add_data(data,user):# функция указывает,что были добавлены изменения в базу
+    time = datetime.now().strftime('%c')
+    with open('log.csv', 'a+', encoding='utf-8') as file:
+        file.write(f'{time} Пользователем {user} была добавнена информация: {data} \n')
+        
+def exp_data(data,user):# функция указывает,что были добавлены изменения в базу
+    time = datetime.now().strftime('%c')
+    with open('log.csv', 'a+', encoding='utf-8') as file:
+        file.write(f'{time} Был произведен запрос информации : {data} \n')
