@@ -44,14 +44,19 @@ def choice_todo(user):
     print("Выберете команду:\n\
     1 - ипорт;\n\
     2 - экспорт;\n\
-    3 - поиск контакта.")
+    3 - поиск контакта;\n\
+    4 - выход из программы.")
     ch = input("Введите цифру: ")
     if ch == '1':
         sep = None
         import_data(input_data(user), sep)
+        print()
+        choice_todo(user)
     elif ch == '2':
         data = export_data()
         print_data(data)
+        print()
+        choice_todo(user)
     elif ch== '3':
         word = input("Введите данные для поиска: ")
         data = export_data()
@@ -61,8 +66,15 @@ def choice_todo(user):
             print('Фамилия'.center(20),'Имя'.center(20),'Отчество'.center(20),'Дата рождения'.center(20),'Телефон'.center(15),'Категория'.center(30))
             print('-'*130)
             print(item[0].center(20),item[1].center(20),item[2].center(20),item[3].center(20),item[4].center(15),item[5].center(30))
+            print()
+            choice_todo(user)
         else:
             print("Данные не обнаруженны")
+            print()
+            choice_todo(user)
+    elif ch== '4':
+        log_out(user)
+        return print('Спасибо за использование программы!\n')
     else:
         print('Неверный ввод данных. Повторите попытку выбора.')
         return choice_todo(user)
