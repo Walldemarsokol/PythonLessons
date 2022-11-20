@@ -8,21 +8,25 @@ from log import *
 
 def choice():
     print(  'Добро пожаловать в базу данных компании!\n\
-            Для регистрации нажмите 1;\n \
-            Для входа по имени + пароль нажмите 2;\n\
+            Для регистрации пользователя нажмите 1;\n \
+            Для входа пользователя нажмите 2;\n\
             Для входа без авторизации нажмите 3;\n\
-            При ошибке ввода можно повторить попытку.\n')
+            При ошибке ввода можно повторить попытку.')
     data=input('Enter number: ')
     if data=='1':
         return reg_user()
     elif data=='2':
         return user_log_in()
-    elif data=='3':
-        log_in_not_auto()
-        choice_todo()
+    # elif data=='3':
+    #     log_in_not_auto()
+    #     choice_todo(user)
     else:
-        return choice(input('Введите 1 или 2: '))
-        
+        print('Неправильно набрана команда\n')
+        return choice()
+
+
+
+
 
 def input_data(user):
     last_name = input("Введите фамилию: ")
@@ -44,7 +48,7 @@ def choice_todo(user):
     ch = input("Введите цифру: ")
     if ch == '1':
         sep = None
-        import_data(input_data(), sep)
+        import_data(input_data(user), sep)
     elif ch == '2':
         data = export_data()
         print_data(data)
@@ -61,7 +65,7 @@ def choice_todo(user):
             print("Данные не обнаруженны")
     else:
         print('Неверный ввод данных. Повторите попытку выбора.')
-        return choice_todo()
+        return choice_todo(user)
     
 
 
@@ -120,7 +124,8 @@ def user_log_in():
                 print('Пользователь не найден.Повторите попытку.')
                 return user_log_in()
                 a = False
-    choice_todo()
+    choice_todo(user)
+
 
 def log_pass(user):
     pas=input('Enter password: ')
@@ -137,6 +142,6 @@ def log_pass(user):
             elif not file_line:
                 print('Пароль неверный. Повторите попытку.')
                 print()
-                uncorrect_password(user)
+                uncorrect_password(user)#фиксация,если пароль не верный
                 return user_log_in()
                 a = False
