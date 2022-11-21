@@ -1,18 +1,3 @@
 
-Vladimir
-123456
-
-victor
-12456
-
-Vladislav
-123456
-
-Oleg
-123789
-
-Roman
-123456789
-
 Petr
 123456789

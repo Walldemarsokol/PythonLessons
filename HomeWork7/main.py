@@ -1,5 +1,0 @@
-from controller import *
-
-choice()
-
- 
