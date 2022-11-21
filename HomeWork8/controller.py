@@ -2,8 +2,6 @@ from import_data import import_data
 from export_data import export_data
 from print_data import print_data
 from search_data import search_data
-# from user_login import *
-# from registration import reg_user
 from log import *
 
 def choice():
@@ -18,10 +16,7 @@ def choice():
     elif data=='2':
         return user_log_in()
     elif data=='3':
-        
         return  print('Спасибо за использование программы!\n')
-    #     log_in_not_auto()
-    #     choice_todo(user)
     else:
         print('Неправильно набрана команда\n')
         return choice()
@@ -109,7 +104,6 @@ def reg_password():
     
 def check_name(file,usr):
     with open(file,'r',encoding='utf-8') as f:
-        # f.read()
         a = True
         while a:
             file_line = f.read()
@@ -125,11 +119,10 @@ def check_name(file,usr):
                     a=False
                     
                     
-                    #метод входа пользователя и логгер входа
+
 def user_log_in():
     user=input('Enter user name: ')
     with open('users.txt','r',encoding='utf-8') as us:
-        # us.readline()
         a = True
         while a:
             file_line = us.readline()
@@ -141,26 +134,6 @@ def user_log_in():
                 return user_log_in()
                 a = False
     choice_todo(user)
-
-
-# def log_pass(user):
-#     pas=input('Enter password: ')
-#     with open('users.txt','r+',encoding='utf-8') as us:
-#         # us.readline()
-#         a = True
-#         while a:
-#             file_line = us.readline()
-#             if pas in file_line:
-#                 log_in(user)# функция для фиксации входа в систему
-#                 print(f'Welcome,{user}!')
-#                 print()
-#                 a = False
-#             elif not file_line:
-#                 print('Пароль неверный. Повторите попытку.')
-#                 print()
-#                 uncorrect_password(user)#фиксация,если пароль не верный
-#                 return log_pass(user)
-#                 a = False
 
 def control_pass(list,user,pas):
     list_new=[]

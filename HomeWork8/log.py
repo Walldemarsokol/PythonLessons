@@ -5,11 +5,7 @@ def log_in(data):# функция для фиксации входа в сист
     with open('logger.csv', 'a+', encoding='utf-8') as file:
         file.write(f'{time} Пользователь {data} вошел в систему.\n')
         
-# def log_in_not_auto():# функция для фиксации входа в систему
-#     time = datetime.now().strftime('%c')
-#     with open('log.csv', 'a+', encoding='utf-8') as file:
-#         file.write(f'{time} Неавторизированный пользователь вошел в систему.\n')
-        
+
 def log_sing_up(data):# фиксация регистрации пользователя
     time = datetime.now().strftime('%c')
     with open('logger.csv', 'a+', encoding='utf-8') as file:
