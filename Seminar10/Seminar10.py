@@ -49,7 +49,7 @@
 #     def get_day (self, day):
 #         return day
 
-#     def format (self):
+#     def format (self): 
 #         return '{:02}.{:02}.{:04}'.format(self.month, self.day, self.year)
 
 
