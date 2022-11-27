@@ -58,8 +58,8 @@ class TicTacToeBoard:
         self.win = ''
         self.first_move = True
         
-    def get_field(self):#для получения поля(список списков)
-        return self.field
+    def get_field(self):#для получения поля(список списков).
+        return self.field #При каждом вызове появляется обновленное поле
     
         
         #для проверки, есть ли победитель.
@@ -102,10 +102,6 @@ class TicTacToeBoard:
                 self.end_of_game=True
                 self.win=self.field[2][0]
                 return f'Победил игрок {self.field[2][0]}'
-            elif self.field[1].count(self.field[1][0])==3 and self.field[1][0]!='-':
-                self.end_of_game=True
-                self.win=self.field[1][0]
-                return f'Победил игрок {self.field[1][0]}'
             elif self.field[0][0]==self.field[1][0]==self.field[2][0] and self.field[0][0]!='-':
                 self.end_of_game=True
                 self.win=self.field[0][0]

@@ -1,22 +1,22 @@
 # class Auto:
-# # атрибуты класса
-# auto_name = "Lexus"
-# auto_model = "RX 350L"
-# auto_year = 2019
+#     # атрибуты класса
+#     auto_name = "Lexus"
+#     auto_model = "RX 350L"
+#     auto_year = 2019
 # # методы класса
-# def on_auto_start(self):
-# print(f"Заводим автомобиль")
-# def on_auto_stop(self):
-# print("Останавливаем работу двигателя")
+#     def on_auto_start(self):
+#         print(f"Заводим автомобиль")
+#     def on_auto_stop(self):
+#         print("Останавливаем работу двигателя")
 
 
-# a = Auto()
+# a = Auto() #Создадим экземпляр для класса, описанного выше
 # print(a)
 # print(type(a))
 # print(a.auto_name)
 # a.on_auto_start()
 # a.on_auto_stop()
-            
+
 
 
 # <__main__.Auto object at 0x0000001381FD8B38>
@@ -29,22 +29,22 @@
 # # атрибуты класса
 #     auto_count = 0
 
-#     def __init__(self, auto_name, auto_model, auto_year):
-#         self.auto_name = auto_name
-#         self.auto_model = auto_model
-#         self.auto_year = auto_year
+#     # def __init__(self, auto_name, auto_model, auto_year):  auto_name, auto_model, auto_year - это атрибуты экземпляра
+#     #     self.auto_name = auto_name
+#     #     self.auto_model = auto_model
+#     #     self.auto_year = auto_year
 
 # # методы класса
 #     def on_auto_start(self, auto_name, auto_model, auto_year):
 #         print("Автомобиль заведен")
-#         # self.auto_name = auto_name
-#         # self.auto_model = auto_model
-#         # self.auto_year = auto_year
-#         # Auto.auto_count += 1
+#         self.auto_name = auto_name
+#         self.auto_model = auto_model
+#         self.auto_year = auto_year
+#         Auto.auto_count += 1
 
 
-# a=Auto('Audi','RS6',2016)
-# print(a.auto_name)
+# # a=Auto('Audi','RS6',2016)
+# # print(a.auto_name)
         
 
 # a = Auto()
@@ -58,7 +58,36 @@
 # print(b.auto_name)
 # print(b.auto_model)
 # print(b.auto_year)
+# print(a.auto_count)
 
+
+
+
+# class Auto:
+#     auto_count=0
+#     def __init__(self):
+#         Auto.auto_count+=1
+#         print('Hello')
+#         print(self.auto_count)
+        
+        
+# a=Auto()
+# b=Auto()
+# c=Auto()
+
+
+# Класс Transport
+# class Transport:
+#     def transport_method(self):
+#         print("Это родительский метод из класса Transport")
+# # Класс Auto, наследующий Transport
+# class Auto(Transport):
+#     def auto_method(self):
+#         print("Это метод из дочернего класса")
+
+# a=Auto()
+# a.transport_method()
+# a.auto_method()
 #Написать класс литллБелл который при вызове метода соунд будет писать динг
 
 # class LitlleBell:
