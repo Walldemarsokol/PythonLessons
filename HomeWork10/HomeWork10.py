@@ -52,7 +52,7 @@
 # print(mins.result(), maxs.result(), '{:<05.3}'.format(average.result()))
 
 
-class Table(object):
+class Table:
     
     def __init__(self,rows, cols):
         self.field = [ [0 for _ in range(cols)] for _ in range(rows) ]
@@ -62,7 +62,8 @@ class Table(object):
     def get_value(self, row, col):
         if  row in range(self.rows) and col in range(self.cols):
             return self.field[row][col]
-        return
+        else:
+            return None
  
     def set_value(self, row, col,value):
         self.field[row][col] = value
@@ -73,10 +74,21 @@ class Table(object):
     def n_cols(self):
         return self.cols
 
+    def add_row(self,row):
+        return self.field[row]
+            
+    
 tab = Table(3, 5)
 tab.set_value(0, 1, 10)
 tab.set_value(1, 2, 20)
 tab.set_value(2, 3, 30)
+for i in range(tab.n_rows()):
+    for j in range(tab.n_cols()):
+        print(tab.get_value(i, j), end=' ')
+    print()
+    
+tab.add_row(1)
+
 for i in range(tab.n_rows()):
     for j in range(tab.n_cols()):
         print(tab.get_value(i, j), end=' ')
